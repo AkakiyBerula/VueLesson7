@@ -28,6 +28,7 @@
         </template>
       </NamedSlots>
     </div>
+
     <div>
       <FallbackSlots>
         <template v-slot:header>
@@ -40,6 +41,13 @@
         </template>
       </FallbackSlots>
     </div>
+    <div>
+      <ScopedSlots >
+        <template v-slot="message">
+          <div><p>{{ message.data }}</p></div>
+        </template>
+      </ScopedSlots>
+    </div>
   </div>
 </template>
 
@@ -49,15 +57,22 @@ import FirstBaseComp from '../components/slot-components/FirstBaseComp.vue';
 import SecondBaseComp from '../components/slot-components/SecondBaseComp.vue';
 import NamedSlots from '../components/slot-components/NamedSlots.vue'
 import FallbackSlots from '../components/slot-components/FallbackSlots.vue'
+import ScopedSlots from '../components/slot-components/ScopedSlots.vue'
 
 export default {
   name: "Slots",
+  data() {
+    return {
+      childData: ''
+    }
+  },
   components: {
     SingleSlot,
     FirstBaseComp,
     SecondBaseComp,
     NamedSlots,
-    FallbackSlots
+    FallbackSlots,
+    ScopedSlots
   }
 }
 </script>
