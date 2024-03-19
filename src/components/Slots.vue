@@ -16,18 +16,30 @@
     </SingleSlot>
 
     <div>
-    <NamedSlots>
-      <template v-slot:header>
-        <v-card-title class="headline">Header</v-card-title>
-      </template>
-      <template v-slot:content>
-        <v-card-text>Довільний вміст</v-card-text>
-      </template>
-      <template v-slot:footer>
-        <v-card-text>Footer</v-card-text>
-      </template>
-    </NamedSlots>
-  </div>
+      <NamedSlots>
+        <template v-slot:header>
+          <v-card-title class="headline">Header</v-card-title>
+        </template>
+        <template v-slot:content>
+          <v-card-text>Довільний вміст</v-card-text>
+        </template>
+        <template v-slot:footer>
+          <v-card-text>Footer</v-card-text>
+        </template>
+      </NamedSlots>
+    </div>
+    <div>
+      <FallbackSlots>
+        <template v-slot:header>
+          <h2>Заголовок визначено</h2>
+        </template>
+        <template v-slot:content>
+        </template>
+        <template v-slot:footer>
+          <p>Підвал визначено</p>
+        </template>
+      </FallbackSlots>
+    </div>
   </div>
 </template>
 
@@ -36,6 +48,7 @@ import SingleSlot from '../components/slot-components/SingleSlot.vue';
 import FirstBaseComp from '../components/slot-components/FirstBaseComp.vue';
 import SecondBaseComp from '../components/slot-components/SecondBaseComp.vue';
 import NamedSlots from '../components/slot-components/NamedSlots.vue'
+import FallbackSlots from '../components/slot-components/FallbackSlots.vue'
 
 export default {
   name: "Slots",
@@ -43,7 +56,8 @@ export default {
     SingleSlot,
     FirstBaseComp,
     SecondBaseComp,
-    NamedSlots
+    NamedSlots,
+    FallbackSlots
   }
 }
 </script>
@@ -57,7 +71,7 @@ h1 {
 }
 
 .spacer {
-  height: 20px; /* Встановіть висоту відступу за вашими потребами */
+  height: 20px;
 }
 
 h3 {
