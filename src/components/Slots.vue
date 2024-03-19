@@ -47,6 +47,25 @@
           <div><p>{{ message.data }}</p></div>
         </template>
       </ScopedSlots>
+      
+    </div>
+    <div>
+      <v-text-field label="Header" v-model="header"></v-text-field>
+      <v-text-field label="Content" v-model="content"></v-text-field>
+      <v-text-field label="Footer" v-model="footer"></v-text-field>
+      <ModalSlots :header="header" :content="content" :footer="footer" ref="namedSlotsModal">
+        <template v-slot:header>
+          <v-card-title class="headline">Header: {{ header }}</v-card-title>
+        </template>
+        <template v-slot:content>
+          <v-card-text>Content: {{ content }}</v-card-text>
+        </template>
+        <template v-slot:footer>
+          <v-card-actions>
+            <v-card-text>Footer: {{ footer }}</v-card-text>
+          </v-card-actions>
+        </template>
+      </ModalSlots>
     </div>
   </div>
 </template>
@@ -57,13 +76,18 @@ import FirstBaseComp from '../components/slot-components/FirstBaseComp.vue';
 import SecondBaseComp from '../components/slot-components/SecondBaseComp.vue';
 import NamedSlots from '../components/slot-components/NamedSlots.vue'
 import FallbackSlots from '../components/slot-components/FallbackSlots.vue'
-import ScopedSlots from '../components/slot-components/ScopedSlots.vue'
+import ScopedSlots from '../components/slot-components/ScopedSlots.vue';
+import ModalSlots from './slot-components/ModalSlots.vue';
 
 export default {
   name: "Slots",
   data() {
     return {
-      childData: ''
+      childData: '',
+      isModalVisible: false,
+      header: '',
+      content: '',
+      footer: ''
     }
   },
   components: {
@@ -72,7 +96,8 @@ export default {
     SecondBaseComp,
     NamedSlots,
     FallbackSlots,
-    ScopedSlots
+    ScopedSlots,
+    ModalSlots
   }
 }
 </script>
