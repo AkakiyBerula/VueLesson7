@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-container class="text-center">
+      <p> {{ globalMessage() }}</p>
       <h2>Лічильник: {{ counter }}</h2>
       <p> Повідомлення: {{ message }}</p>
       <p> Довжина рядка: {{ countLength }}</p>

@@ -17,10 +17,19 @@ const vuetify = createVuetify({
     directives
 })
 
+const globalMixin = {
+    methods: {
+        globalMessage() {
+            return 'Метод глобального міксину запущено!'
+        }
+    }
+};
+
 const pinia = createPinia()
 
 createApp(App)
     .use(vuetify)
     .use(router)
     .use(pinia)
+    .mixin(globalMixin)
     .mount('#app')
