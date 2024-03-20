@@ -25,9 +25,11 @@
 </template>
 
 <script>
+import { lifeCycleMixin } from '@/components/mixins/lifeCycleMixin.js'
 
 export default {
   name: 'App',
+  mixins: [lifeCycleMixin],
   methods: {
     redirectTo(nameRoute) {
       const routeExists = this.$router.hasRoute(nameRoute);
