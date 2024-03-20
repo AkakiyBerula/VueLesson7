@@ -1,12 +1,18 @@
 <template>
   <div class="greetings">
     <h1 class="green  text-center">Міксіни</h1>
+    <BaseMixin />
   </div>
 </template>
 
 <script>
+import BaseMixin from "../components/mixin-components/BaseMixin.vue"
+
 export default {
-  name: "Mixins"
+  name: "Mixins",
+  components: {
+    BaseMixin
+  }
 }
 </script>
 
