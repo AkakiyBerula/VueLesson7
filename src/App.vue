@@ -14,8 +14,11 @@
       <div @click="redirectTo('mixins')">
         <v-tab :value="3">Mixins</v-tab>
       </div>
+      <div @click="redirectTo('form')">
+        <v-tab :value="4">Mixin Form</v-tab>
+      </div>
       <div @click="redirectTo('directives')">
-        <v-tab :value="4">Directives</v-tab>
+        <v-tab :value="5">Directives</v-tab>
       </div>
     </v-tabs>
     

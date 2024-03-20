@@ -7,11 +7,13 @@
 
 <script>
 import BaseMixin from "../components/mixin-components/BaseMixin.vue"
+import FormMixin from "../components/mixin-components/FormMixin.vue"
 
 export default {
   name: "Mixins",
   components: {
-    BaseMixin
+    BaseMixin,
+    FormMixin
   }
 }
 </script>

@@ -3,6 +3,7 @@ import HelloWorld from "../components/HelloWorld.vue";
 import Slots from "../components/Slots.vue"
 import Mixins from "../components/Mixins.vue"
 import Directives from "../components/Directives.vue"
+import FormMixin from "../components/mixin-components/FormMixin.vue"
 
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
         path: '/mixins',
         name: 'mixins',
         component: Mixins,
+    },
+    {
+        path: '/form',
+        name: 'form',
+        component: FormMixin, 
     },
     { 
         path: '/directives',
