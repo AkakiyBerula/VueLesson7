@@ -1,18 +1,19 @@
 <template>
   <div class="greetings">
-    <h1 class="green text-center">Директиви</h1>
-    <BaseDirective />
+    <h2 v-change-color="'red'" class="text-center">Червоний</h2>
+    <h2 v-change-color="'green'" class="text-center">Зелений</h2>
+    <h2 v-change-color="'blue'" class="text-center">Синій</h2>
   </div>
 </template>
 
 <script>
-import BaseDirective from './directive-components/BaseDirective.vue'
+import ChangeColor from '@/directives/ColorDirective.js'
 export default {
-  name: "Directives",
-  components: {
-    BaseDirective
+  name: "BasicDirective",
+  directives: {
+    ChangeColor
   }
-}
+};
 </script>
 
 <style scoped>
