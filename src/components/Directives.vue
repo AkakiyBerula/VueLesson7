@@ -2,15 +2,18 @@
   <div class="greetings">
     <h1 class="green text-center">Директиви</h1>
     <BaseDirective />
+    <TextDirective />
   </div>
 </template>
 
 <script>
 import BaseDirective from './directive-components/BaseDirective.vue'
+import TextDirective from './directive-components/TextDirective.vue'
 export default {
   name: "Directives",
   components: {
-    BaseDirective
+    BaseDirective,
+    TextDirective
   }
 }
 </script>
