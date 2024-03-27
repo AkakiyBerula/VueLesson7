@@ -25,11 +25,22 @@ const globalMixin = {
     }
 };
 
+
+
+
 const pinia = createPinia()
 
-createApp(App)
-    .use(vuetify)
+const app = createApp(App)
+
+app.use(vuetify)
     .use(router)
     .use(pinia)
     .mixin(globalMixin)
-    .mount('#app')
+
+app.directive('green-bg', {
+    mounted(el) {
+        el.style.background = "green";
+    }
+});
+
+app.mount('#app')

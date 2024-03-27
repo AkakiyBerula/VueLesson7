@@ -5,6 +5,8 @@
     <TextDirective />
     <TooltipDirective />
     <DragDirective />
+    <v-divider></v-divider>
+    <GlobalDirective />
   </div>
 </template>
 
@@ -13,7 +15,8 @@ import BaseDirective from './directive-components/BaseDirective.vue'
 import DragDirectiveVue from './directive-components/DragDirective.vue';
 import TextDirective from './directive-components/TextDirective.vue'
 import TooltipDirective from './directive-components/TooltipDirective.vue';
-import DragDirective from "./directive-components/DragDirective.vue"
+import DragDirective from "./directive-components/DragDirective.vue";
+import GlobalDirective from "./directive-components/GlobalDirective.vue"
 
 export default {
   name: "Directives",
@@ -21,7 +24,8 @@ export default {
     BaseDirective,
     TextDirective,
     TooltipDirective,
-    DragDirective
+    DragDirective,
+    GlobalDirective
   }
 }
 </script>
